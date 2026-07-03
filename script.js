@@ -52,6 +52,13 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+document.addEventListener("touchstart", (e) => {
+    velocity = -5;
+    if (jumpSound.currentTime === 0 || jumpSound.ended) {
+      jumpSound.play();
+    }
+  }
+);
 
 function createPipe() {
   let scored = false;
